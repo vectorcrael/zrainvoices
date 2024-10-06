@@ -1,0 +1,10 @@
+﻿//Install java and download Tomcat 9
+
+//run these commands from the tomcat folder to get it running
+cd /Applications/apache-tomcat-9.0.95/bin
+
+//to start the service
+./startup.sh
+
+//to stop the service
+./shutdown.sh  
