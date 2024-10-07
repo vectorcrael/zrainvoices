@@ -9,16 +9,17 @@ namespace VSDCAPIApiClient
 
         public static class DeviceDetails
         {
-            public static string tPin { get; set; } = "";
-            public static string branchId { get; set; } = "";
+            public static string Tpin { get; set; } = "1002546945";
+            public static string BhfId { get; set; } = "000";
+            public static string DvcSrlNo { get; set; } = "CHC-EVO";
         }
 
         public static SaveSalesRequest ConvertInvoice(ZraInvoice zraInvoice)
         {
             SaveSalesRequest invoice = new SaveSalesRequest
             {
-                BhfId = DeviceDetails.branchId,
-                Tpin = DeviceDetails.tPin,
+                BhfId = DeviceDetails.BhfId,
+                Tpin = DeviceDetails.Tpin,
                 OrgInvcNo = (int)zraInvoice.OriginalInvoiceNumber,
                 CisInvcNo = zraInvoice.InvoiceNumber,
                 CustTpin = zraInvoice.CustomerTpin,
@@ -159,8 +160,8 @@ namespace VSDCAPIApiClient
                 ExciseTxCatCd = item.ExciseTxCatCd,
                 Bcd = item.Bcd,
                 DftPrc = item.Prc, 
-                Tpin = DeviceDetails.tPin,
-                BhfId = DeviceDetails.branchId,
+                Tpin = DeviceDetails.Tpin,
+                BhfId = DeviceDetails.BhfId,
                 ItemTyCd = null,
                 ItemStdNm = null,
                 OrgnNatCd = null,
